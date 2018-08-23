@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DevRegister</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li class="active" data-section-url="index.html" onclick="setActiveMenu(this)"><a href="#">Encuentra tu alojamiento <span class="sr-only">(current)</span></a></li>
+						<li data-section-url="upload_form.html" onclick="setActiveMenu(this)"><a href="#">Conviertete en anfitrión</a></li> -->
+						<li class="active" data-section-url="index.html" onclick="window.location.href = 'index.html'"><a href="#">Registro de horas<span class="sr-only">(current)</span></a></li>
+						<li data-section-url="upload_form.html" onclick="window.location.href = 'upload_form.html'"><a href="#">Consulta de horas</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section class="main-wrapper">
+			<div class="container">
+				<div class="row">
+					<form action="">
+						<div class="form-group">
+							<div class="dropdown">
+								<button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Selecciona tu nombre
+								<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dLabel" onclick="getSelection()">
+									<li onclick="getSelection(this,selectedDeveloper)">Shalem Monserrat Solís Lagunas</li>
+									<li onclick="getSelection(this,selectedDeveloper)">Monserrat Jiménez Velázquez</li>
+									<li onclick="getSelection(this,selectedDeveloper)">Óscar López Deleyja</li>
+									<li onclick="getSelection(this,selectedDeveloper)">Amadeo Jaime Terreros</li>
+									<li onclick="getSelection(this,selectedDeveloper)">Israel Salinas Martínez</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for=""></label>
+							<input type="text" class="form-control">
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyDVyynhuvvOSspd59ffdfCuBuJejd0u-N4",
+		    authDomain: "devregister-1c012.firebaseapp.com",
+		    databaseURL: "https://devregister-1c012.firebaseio.com",
+		    projectId: "devregister-1c012",
+		    storageBucket: "",
+		    messagingSenderId: "499760797614"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
